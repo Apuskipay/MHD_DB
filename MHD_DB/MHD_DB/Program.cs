@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+namespace MHD_DB
 {
     internal static class Program
     {
