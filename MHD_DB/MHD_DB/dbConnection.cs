@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using System.Data;
 
 namespace MHD_DB
 {
@@ -21,6 +22,27 @@ namespace MHD_DB
             conn.Close();
             MessageBox.Show("Desconexión exitosa!");
         }
-        
+
+        public DataTable GetData()
+        {
+            string query = "SELECT * FROM public.\"Objeto\"";
+            NpgsqlCommand connection = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter data = new NpgsqlDataAdapter(connection);
+            DataTable table = new DataTable();
+            data.Fill(table);
+
+            return table;
+        }
+       /* public DataTable GetData(string searchParameter)
+        {
+            string query = "select * from \"Objeto\" where \"codigo_objeto\" = ";
+            NpgsqlCommand connection = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter data = new NpgsqlDataAdapter(connection);
+            DataTable table = new DataTable();
+            data.Fill(table);
+
+            return table;
+        }
+       */
     }
 }
