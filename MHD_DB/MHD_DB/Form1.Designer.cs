@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.clbSearch = new System.Windows.Forms.CheckedListBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnEditRegister = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbConnectionBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +65,7 @@
             // 
             // btnAddRegister
             // 
+            this.btnAddRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAddRegister.Location = new System.Drawing.Point(12, 500);
             this.btnAddRegister.Name = "btnAddRegister";
             this.btnAddRegister.Size = new System.Drawing.Size(159, 29);
@@ -74,9 +76,15 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(177, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(594, 517);
@@ -124,11 +132,22 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // btnEditRegister
+            // 
+            this.btnEditRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditRegister.Location = new System.Drawing.Point(12, 465);
+            this.btnEditRegister.Name = "btnEditRegister";
+            this.btnEditRegister.Size = new System.Drawing.Size(159, 29);
+            this.btnEditRegister.TabIndex = 9;
+            this.btnEditRegister.Text = "Editar Registro";
+            this.btnEditRegister.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 541);
+            this.Controls.Add(this.btnEditRegister);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.clbSearch);
             this.Controls.Add(this.label1);
@@ -137,6 +156,7 @@
             this.Controls.Add(this.btnAddRegister);
             this.Controls.Add(this.btnDisconnect);
             this.Controls.Add(this.btnConnect);
+            this.MinimumSize = new System.Drawing.Size(801, 588);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -157,5 +177,6 @@
         private Label label1;
         private CheckedListBox clbSearch;
         private Button btnSearch;
+        private Button btnEditRegister;
     }
 }
