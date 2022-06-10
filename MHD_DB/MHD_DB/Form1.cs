@@ -9,6 +9,7 @@ namespace MHD_DB
             btnDisconnect.Enabled = false;
             btnAddRegister.Enabled = false;
             btnSearch.Enabled = false;
+            btnEditRegister.Enabled = false;
             TBsearch.Enabled = false;
             clbSearch.Enabled = false;
         }
@@ -22,6 +23,7 @@ namespace MHD_DB
             btnSearch.Enabled = true;
             TBsearch.Enabled = true;
             clbSearch.Enabled = true;
+            btnEditRegister.Enabled = true;
         }
 
         private void btnDisconnect_Click(object sender, EventArgs e)
@@ -30,6 +32,7 @@ namespace MHD_DB
             btnDisconnect.Enabled = false;
             btnAddRegister.Enabled = false;
             btnSearch.Enabled = false;
+            btnEditRegister.Enabled = false;
             TBsearch.Enabled = false;
             clbSearch.Enabled = false;
             btnConnect.Enabled = true;

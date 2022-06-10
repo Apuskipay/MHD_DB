@@ -10,7 +10,7 @@ namespace MHD_DB
 {
     public class dbConnection
     {
-        NpgsqlConnection conn = new NpgsqlConnection("Server = localhost; User Id= postgres; Password = J313185264d; Database = MHD_DB");
+        NpgsqlConnection conn = new NpgsqlConnection("Server = localhost; User Id= postgres; Password = J313185264d; Database = MHD_DB_SIMPLE");
         public void Connect()
         {
             conn.Open();
@@ -33,7 +33,7 @@ namespace MHD_DB
 
             return table;
         }
-       /* public DataTable GetData(string searchParameter)
+        public DataTable GetData(string searchParameter)
         {
             string query = "select * from \"Objeto\" where \"codigo_objeto\" = ";
             NpgsqlCommand connection = new NpgsqlCommand(query, conn);
@@ -43,6 +43,6 @@ namespace MHD_DB
 
             return table;
         }
-       */
+       
     }
 }
