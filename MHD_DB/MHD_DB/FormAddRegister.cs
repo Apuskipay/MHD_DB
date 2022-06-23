@@ -12,6 +12,7 @@ namespace MHD_DB
 {
     public partial class FormAddRegister : Form
     {
+        dbConnection DBconnection = new dbConnection();
         public FormAddRegister()
         {
             InitializeComponent();
@@ -111,6 +112,77 @@ namespace MHD_DB
         private void pictureBox6_DragEnter(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Copy;
+        }
+
+        private void btnRegistrarObjeto_Click(object sender, EventArgs e)
+        {
+            //Sends the data as parameters
+            DBconnection.Insert(
+                tbCodigo_Objeto.Text,
+                tbOtrosCodigos.Text,
+                tbTipo_Objeto.Text,
+                tbDescripcion.Text,
+                tbMaterial.Text,
+                tbProcedencia.Text,
+                tbCultura.Text,
+                tbEpoca.Text,
+                tbEstilo.Text,
+                cbListaRoja.Text,
+                tbMovimientos.Text,
+                cbConservacion.Text,
+                tbObservacion.Text,
+                tbBibliografia.Text,
+                cbUbicacionActual.Text,
+                tbPiso.Text,
+                tbAmbito.Text,
+                tbVitrina.Text,
+                cbDeposito.Text,
+                tbNumeroDeposito.Text,
+                tbNumeroContenedor.Text,
+                Convert.ToDouble(tbAltoVal.Text),
+                cbAltoUni.Text,
+                Convert.ToDouble(tbAnchoVal.Text),
+                cbAnchoUni.Text,
+                Convert.ToDouble(tbLargoVal.Text),
+                cbLargoUni.Text,
+                Convert.ToDouble(tbEspVal.Text),
+                cbEspUni.Text,
+                Convert.ToDouble(tbEjeMayorVal.Text),
+                cbEjeMayorUni.Text,
+                Convert.ToDouble(tbEjeMenorVal.Text),
+                cbEjeMenorUni.Text,
+                Convert.ToDouble(tbPesoVal.Text),
+                cbPesoUni.Text,
+                tbCodFot1.Text,
+                tbCodFot2.Text,
+                tbCodFot3.Text,
+                tbCodFot4.Text,
+                tbCodFot5.Text,
+                tbCodFot6.Text,
+                "user/MHD_DB/DOC_FOT/" + tbCodigo_Objeto + "/" + tbCodFot1.Text + ".jpeg",
+                "user/MHD_DB/DOC_FOT/" + tbCodigo_Objeto + "/" + tbCodFot2.Text + ".jpeg",
+                "user/MHD_DB/DOC_FOT/" + tbCodigo_Objeto + "/" + tbCodFot3.Text + ".jpeg",
+                "user/MHD_DB/DOC_FOT/" + tbCodigo_Objeto + "/" + tbCodFot4.Text + ".jpeg",
+                "user/MHD_DB/DOC_FOT/" + tbCodigo_Objeto + "/" + tbCodFot5.Text + ".jpeg",
+                "user/MHD_DB/DOC_FOT/" + tbCodigo_Objeto + "/" + tbCodFot6.Text + ".jpeg",
+                tbInventariadoPor.Text,
+                mcFechaInventario.Text,
+                tbFotografiadoPor.Text,
+                mcFechaFotografia.Text,
+                tbDigitadoPor.Text,
+                mcFechaDigitacion.Text);
+                
+
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
