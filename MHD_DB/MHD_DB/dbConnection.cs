@@ -8,6 +8,7 @@ using System.Data;
 
 namespace MHD_DB
 {
+    //TEST COMMENT
     public class dbConnection
     {
         NpgsqlConnection conn = new NpgsqlConnection("Server = localhost; User Id= postgres; Password = J313185264d; Database = MHD_DB_SIMPLE");
